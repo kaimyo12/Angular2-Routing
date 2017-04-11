@@ -1,0 +1,12 @@
+    <h2>CRISIS CENTER</h2>
+    <p>Get your crisis here</p>
+
+ <ul class="items">
+    <li *ngForOf="let crisis of crises">
+      <a [routerLink]="[crisis.id]"
+         [class.selected]="isSelected(crisis)">
+        <span class="badge">{{ crisis.id }}</span>
+        {{ crisis.title }}
+      </a>
+    </li>
+  </ul>

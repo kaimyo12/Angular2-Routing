@@ -1,0 +1,13 @@
+    <h2>Crisis Center</h2>
+    <ul class="heroes">
+      <li *ngFor="let crisis of crises | async"
+        [class.selected]="isSelected(crisis.id)"
+        (click)="onSelect(hero)">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+      </li>
+    </ul>
+    
+  <div *ngIf = "selectedHero">
+  <h3> My hero is {{selectedHero.name || uppercase}}</h3>
+  <button (click)="viewDetails(selectedHero)" > View Details</button>
+  </div>

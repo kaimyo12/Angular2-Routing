@@ -1,0 +1,9 @@
+<h1>Angular Router</h1>
+  <div>
+    <a (click) = "gotoCrisis()" routerLinkActive="active">Crisis Center</a>
+    <a (click)= "gotoHeroes()" routerLinkActive="active">Heroes</a>
+    <!--<a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contact</a>-->
+    <a (click) = "composeMessage()">Contact</a>
+  </div>
+  <router-outlet></router-outlet>
+  <router-outlet name="popup"></router-outlet>

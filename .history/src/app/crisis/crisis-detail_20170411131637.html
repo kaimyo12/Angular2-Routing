@@ -1,0 +1,12 @@
+   <div *ngIf="crisis">
+      <h2>{{editTitle}} details!</h2>
+      <div>
+        <label>id: </label>{{crisis.id}}
+      </div>
+      <div>
+        <label>Title: </label>
+        <input [(ngModel)]="editTitle" placeholder="Crisis title"/>
+      </div>
+    </div>
+    <button (click)= "gotoCrisis()">Back</button>
+    

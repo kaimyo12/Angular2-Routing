@@ -1,0 +1,13 @@
+    <h2>Crisis Center</h2>
+<ul class="heroes">
+      <li *ngFor="let crisis of crises | async"
+        [class.selected]="isSelected(crisis.id)"
+        (click)="onSelect(crisis)">
+        <span class="badge">{{crisis.id}}</span> {{crisis.title}}
+      </li>
+</ul>
+
+<router-outlet></router-outlet> 
+<!-- We add a router-outlet here because it is a parent
+of 2 child, which are the crisisdetail and crisiscenterhome
+check the crisis routing module for assurance -->
